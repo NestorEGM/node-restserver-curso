@@ -40,11 +40,10 @@ app.post('/login', (req, res) => {
       usuario: usuarioDB,
     }, process.env.SEED, { expiresIn: process.env.CADUCIDAD_TOKEN });
 
-    res.cookie('jwt', token, { httpOnly: false });
     res.json({
       ok: true,
       usuario: usuarioDB,
-      // token,
+      token,
     });
   });
 });
