@@ -29,7 +29,6 @@ app.get('/producto', verificaToken, (req, res) => {
           err,
         });
       }
-      console.log(productosDB)
 
       res.json({
         ok: true,
